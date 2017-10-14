@@ -1,0 +1,115 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+
+
+body
+	font-family: $default-font
+	font-size: 16px
+	line-height: 1.75
+	opacity: 1
+	overflow-x: hidden
+	min-width: 320px
+	position: relative
+	background-color: $black
+
+.top_line
+		padding-top: 40px
+					
+.flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.info
+	a
+		color: #fff
+		font-size: 18px
+		text-transform: uppercase
+		text-decoration: none
+		border-bottom: 1px dashed #fff
+		font-weight: bold
+		letter-spacing: 3px
+		&:hover
+			border-bottom: none
+		fa
+			margin-right: 5px
+
+.logo
+	img
+		width: 50px
+		height: auto
+
+.main
+	margin: 20px 0
+	position: relative
+	min-height: 600px
+
+.carousel-main
+	min-width: 320px
+	background-color: $black
+	&-img
+		min-height: 600px
+		background-size: cover
+		background-position: center
+	.owl-nav
+		position: absolute
+		width: 100%
+		top: 50%
+		>div
+			width: 44px
+			height: 44px
+			position: absolute
+			background-color: #fff
+			color: $black
+			line-height: 44px
+			text-align: center
+			font-size: 16px
+			&.owl-next
+				right: 0
+.btn-wrap
+	margin-top: 25px
+
+.btn
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accent
+	padding: 15px 45px
+	font-size: 13px
+	text-transform: uppercase
+	font-weight: 600
+	letter-spacing: 3px
+	border-radius: 5px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	&::after
+		transition: background-color .2s ease
+		position: absolute
+		content: ''
+		height: 4px
+		bottom: 0
+		width: 100%
+		background-color: darken($accent, 50%)
+		opacity: .18
+		border-bottom-left-radius: 2px
+		border-bottom-right-radius: 2px
+		left: 0
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accent, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accent, 5%)
+		&::after
+			opacity: .32				
+
+@import "media" // Всегда в конце

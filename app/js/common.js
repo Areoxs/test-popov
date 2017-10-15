@@ -29,32 +29,41 @@ $(function() {
 	discount: '0'
 });
 	$("#confirm").click(function() { 
-		var th = $(this);
+		
 		$.ajax({
 			type: "POST",
 			url: "https://s1.l-kredit.ru/CLWidget/order_manage.php",
+			data: {
 			func: "confirm",
 			site_name:"popov-test.ru",
-			goods:    '[{"Name":" Phillips чайник","Price":"1450.00","Count":"2"},{"Name":"Набор кружек","Price":"1780.00","Count":"1"}]'	
+			goods:    '[{"Name":" Phillips чайник","Price":"1450.00","Count":"2"},{"Name":"Набор кружек","Price":"1780.00","Count":"1"}]'
+			}
+				
 		});
 });
 	$("#check").click(function() { 
-		var th = $(this);
+		
 		$.ajax({
 			type: "POST",
 			url: "https://s1.l-kredit.ru/CLWidget/order_manage.php",
-			func: "check",
-			site_name:"popov-test.ru",
+			data: {
+				func: "check",
+				site_name:"popov-test.ru"
+			}
+			
 			
 		});
 });
 	$("#del").click(function() { 
-		var th = $(this);
+		
 		$.ajax({
 			type: "POST",
 			url: "https://s1.l-kredit.ru/CLWidget/order_manage.php",
-			func: "delete",
+			data: {
+				func: "delete",
 			site_name:"popov-test.ru"
+			}
+			
 		});
 });
 });
